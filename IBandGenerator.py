@@ -1,3 +1,4 @@
+"""Module provides an interface for band generators"""
 from abc import ABC, abstractmethod
 from typing import List
 

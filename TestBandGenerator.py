@@ -1,3 +1,4 @@
+"""Unit tests for band generators"""
 import pytest
 
 from SimpleBandGenerator import SimpleBandGenerator
@@ -9,6 +10,6 @@ def questions_fixture():
     return expected
 
 
-def test_show_questions(questions_fixture):
+def test_list_questions(questions_fixture):
     band_generator = SimpleBandGenerator()
     assert band_generator.list_questions() == questions_fixture
