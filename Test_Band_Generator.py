@@ -1,4 +1,4 @@
-import unittest
+import pytest
 from abc import ABC, abstractmethod
 from typing import List
 
@@ -21,11 +21,12 @@ class SimpleBandGenerator(BandGenerator):
         return self.__questions
 
 
-class BandGeneratorTestCase(unittest.TestCase):
-    def test_show_questions(self):
-        expected = ["What's the name of the city you grew up in?", "What's your pet's name?"]
-        band_generator = SimpleBandGenerator()
-        self.assertEqual(band_generator.list_questions(), expected)
+@pytest.fixture
+def questions_fixture():
+    expected = ["What's the name of the city you grew up in?", "What's your pet's name?"]
+    return expected
 
-if __name__ == '__main__':
-    unittest.main()
+
+def test_show_questions(questions_fixture):
+    band_generator = SimpleBandGenerator()
+    assert band_generator.list_questions() == questions_fixture
