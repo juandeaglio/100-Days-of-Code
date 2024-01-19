@@ -1,7 +1,7 @@
 """Unit tests for band generators"""
 import pytest
 
-from SimpleBandGenerator import SimpleBandGenerator
+from simple_band_generator import SimpleBandGenerator
 
 
 @pytest.fixture
