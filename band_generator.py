@@ -7,7 +7,7 @@ from typing import List
 class IBandGenerator(ABC):
     @abstractmethod
     def __init__(self):
-        self.__questions: List[str] = []
+        self._questions: List[str] = []
 
 
 
