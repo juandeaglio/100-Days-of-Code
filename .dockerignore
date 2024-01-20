@@ -1,0 +1,13 @@
+*/venv
+*/.pytest_cache
+*/.github
+*/allure_reports
+*/allure-results
+*/.idea
+*/.vscode
+*/.gitignore
+*/.git
+*/.gitattributes
+*/.gitmodules
+*/.gitkeep
+*/.gitlab-ci.yml
