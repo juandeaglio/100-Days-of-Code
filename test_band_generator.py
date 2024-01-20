@@ -24,5 +24,6 @@ def test_list_questions(questions_fixture):
 def test_question_answer(questions_fixture, answers_fixture):
     band_generator = SimpleBandGenerator()
     pairs = band_generator.ask_questions()
-    expected: List[QuestionAnswer] = [QuestionAnswer(question=questions_fixture[0], answer=answers_fixture[0])]
+    expected: List[QuestionAnswer] = [QuestionAnswer(question=questions_fixture[0], answer=answers_fixture[0]),
+                                      QuestionAnswer(question=questions_fixture[1], answer=answers_fixture[1])]
     assert pairs == expected

@@ -1,5 +1,7 @@
+"""A class for pairing an answer to a question."""
+
+
 class QuestionAnswer:
-    """A class for pairing an answer to a question."""
     def __init__(self, question: str = None, answer: str = None):
         self._answer = None
         self._question = None
