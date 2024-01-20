@@ -18,8 +18,8 @@ class MockedInputStream(AbstractInputStream):
     def get_input(self):
         try:
             return self.stream.get(block=False)
-        except Empty:
-            raise ValueError("Stream is empty")
+        except Empty as exc:
+            raise exc
 
 
 @pytest.fixture
@@ -29,7 +29,7 @@ def questions_fixture():
 
 
 @pytest.fixture()
-def answers_fixture(questions_fixture):
+def answers_fixture():
     answers = ["Tarzana", "Kevin"]
     return answers
 

@@ -1,10 +1,10 @@
+"""Abstract class for optionally taking in pre-determined input instead of stdin"""
 from abc import ABC, abstractmethod
-from typing import List
 
 
 class AbstractInputStream(ABC):
     @abstractmethod
-    def __init__(self, questions: List[str]):
+    def __init__(self, answers: str = None):
         return
 
     @abstractmethod

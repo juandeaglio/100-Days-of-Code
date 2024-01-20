@@ -26,7 +26,6 @@ class SimpleBandGenerator(IBandGenerator):
         pairs: List[QuestionAnswer] = []
 
         question: str = self.queue.get()
-        answers = ["Tarzana", "Kevin"]
 
         while len(question) > 0:
             self.query_user(question)
