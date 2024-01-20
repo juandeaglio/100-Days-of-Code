@@ -9,3 +9,7 @@ class SimpleBandGenerator(IBandGenerator):
 
     def list_questions(self):
         return self.__questions
+
+
+    def ask_questions(self):
+        pass
