@@ -1,6 +1,8 @@
 """A simple hardcoded band generator."""
 from typing import List
 from band_generator import IBandGenerator
+from question_answer import QuestionAnswer
+
 
 class SimpleBandGenerator(IBandGenerator):
     def __init__(self):
@@ -12,4 +14,4 @@ class SimpleBandGenerator(IBandGenerator):
 
 
     def ask_questions(self):
-        pass
+        return [QuestionAnswer()]

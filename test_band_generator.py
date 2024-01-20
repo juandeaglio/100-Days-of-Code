@@ -2,12 +2,8 @@
 import pytest
 from typing import List
 
+from question_answer import QuestionAnswer
 from simple_band_generator import SimpleBandGenerator
-
-
-class QuestionAnswer:
-    """A class for pairing an answer to a question."""
-    pass
 
 
 @pytest.fixture
@@ -23,5 +19,6 @@ def test_list_questions(questions_fixture):
 
 def test_question_answer(questions_fixture):
     band_generator = SimpleBandGenerator()
-    answers = band_generator.ask_questions()
-    expected: List[QuestionAnswer] = []
+    pairs = band_generator.ask_questions()
+    expected: List[QuestionAnswer] = [QuestionAnswer()]
+    assert pairs == expected
