@@ -1,3 +1,5 @@
+# test_band_generator.py
+
 """Unit tests for band generators"""
 from typing import List
 
@@ -21,7 +23,7 @@ def answers_fixture():
 
 
 @pytest.fixture()
-def simulated_answers(answers_fixture):
+def simulated_answers_fixture(answers_fixture):
     MockedInputStream.input(answers_fixture)
     input_answers = MockedInputStream.input
     return input_answers
@@ -32,9 +34,9 @@ def test_list_questions(questions_fixture):
     assert band_generator.list_questions() == questions_fixture
 
 
-def test_question_answer(questions_fixture, answers_fixture, simulated_answers):
+def test_question_answer(questions_fixture, answers_fixture, simulated_answers_fixture):
     band_generator = SimpleBandGenerator()
-    pairs = band_generator.ask_questions(simulated_answers)
+    pairs = band_generator.ask_questions(simulated_answers_fixture)
     expected: List[QuestionAnswer] = [QuestionAnswer(question=questions_fixture[0],
                                                      answer=answers_fixture[0]),
                                       QuestionAnswer(question=questions_fixture[1],

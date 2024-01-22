@@ -1,3 +1,4 @@
+# band_generator.py
 """Module for band generator declaration"""
 from abc import ABC, abstractmethod
 

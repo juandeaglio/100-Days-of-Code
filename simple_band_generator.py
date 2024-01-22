@@ -1,3 +1,4 @@
+# simple_band_generator.py
 """A simple hardcoded band generator."""
 from queue import Queue
 from typing import List, Callable

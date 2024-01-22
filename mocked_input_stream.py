@@ -1,3 +1,5 @@
+# mocked_input_stream.py
+
 """Class for using a mocked set of inputs (without the need of using a keyboard)"""
 from typing import List
 
