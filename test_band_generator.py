@@ -45,11 +45,11 @@ def test_question_answer(questions_fixture, answers_fixture, simulated_answers_f
     assert pairs == expected
 
 
-def test_create_band_name(questions_fixture, answers_fixture, simulated_answers_fixture):
+def test_create_band_name(simulated_answers_fixture):
     band_generator = SimpleBandGenerator()
     pairs: List[QuestionAnswer] = band_generator.ask_questions(simulated_answers_fixture)
     answers: List[str] = [pairs[0].get_answer(), pairs[1].get_answer()]
-    name_suggestion = "Your band name could be", " ".join(answers)
+    name_suggestion = "Your band name could be " + " ".join(answers)
     assert band_generator.suggest_band_name() == name_suggestion
 
 

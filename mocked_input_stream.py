@@ -7,7 +7,7 @@ from abstract_input_stream import AbstractInputStream
 
 
 class MockedInputStream(AbstractInputStream):
-    answers: List[str] = []
+    __answers: List[str] = []
 
     @classmethod
     def input(cls, prompt=None) -> str:
@@ -15,7 +15,7 @@ class MockedInputStream(AbstractInputStream):
             prompt = []
 
         if len(prompt) == 0:
-            return cls.answers.pop(0)
+            return cls.__answers.pop(0)
 
-        cls.answers = prompt.copy()
+        cls.__answers = prompt.copy()
         return ''
