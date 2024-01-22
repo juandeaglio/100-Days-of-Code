@@ -23,3 +23,6 @@ class QuestionAnswer:
 
     def __eq__(self, other):
         return self._question == other.get_question() and self._answer == other.get_answer()
+
+    def __str__(self):
+        return self._answer

@@ -9,6 +9,7 @@ from keyboard_input_stream import KeyboardInputStream
 
 class SimpleBandGenerator(IBandGenerator):
     def __init__(self):
+        self.pairs: List[QuestionAnswer] = []
         self._questions: List[str] = ["What's the name of the city you grew up in?",
                                       "What's your pet's name?"]
         self.queue: Queue = self.queue_questions()
@@ -37,7 +38,14 @@ class SimpleBandGenerator(IBandGenerator):
             else:
                 question = ''
 
+        self.pairs = pairs
         return pairs
 
     def query_user(self, question):
         print(question)
+
+    def form_band_name(self):
+        return " ".join(str(pair) for pair in self.pairs)
+
+    def suggest_band_name(self):
+        return "Your band name could be", self.form_band_name()
