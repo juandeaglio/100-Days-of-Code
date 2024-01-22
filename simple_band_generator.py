@@ -1,9 +1,9 @@
 """A simple hardcoded band generator."""
 from queue import Queue
-from typing import List
+from typing import List, Callable
 from band_generator import IBandGenerator
 from question_answer import QuestionAnswer
-from abstract_input_stream import AbstractInputStream
+from keyboard_input_stream import KeyboardInputStream
 
 
 class SimpleBandGenerator(IBandGenerator):
@@ -22,14 +22,14 @@ class SimpleBandGenerator(IBandGenerator):
     def list_questions(self):
         return self._questions
 
-    def ask_questions(self, input_stream: AbstractInputStream):
+    def ask_questions(self, input_stream: Callable[..., str] = KeyboardInputStream().input):
         pairs: List[QuestionAnswer] = []
 
         question: str = self.queue.get()
 
         while len(question) > 0:
             self.query_user(question)
-            answer = input_stream.get_input()
+            answer = input_stream()
             pairs.append(QuestionAnswer(question, answer))
             if not self.queue.empty():
                 question = self.queue.get()
