@@ -1,4 +1,7 @@
-# Wrote some modules for a band generator.
+# A name generator for a band that's personalized to you.
+
+This is a simple project which can be summed up as string concatenation, but I decided to implement some modularity into it with design patterns. I'm going to extend the project to make use of some GPT API to help generate alternative names using the questions & answers provided.
+
 Generates bands based on a list of questions.
 Allows the user to answer via stdin or also use a list of strings to input multiple answers in one function call.
 
