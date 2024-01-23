@@ -1,6 +1,6 @@
 # keyboard_input_stream.py
 """Class for using the default stdin as input"""
-from abstract_input_stream import AbstractInputStream
+from .abstract_input_stream import AbstractInputStream
 
 
 class KeyboardInputStream(AbstractInputStream):

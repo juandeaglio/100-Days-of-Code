@@ -2,9 +2,10 @@
 """A simple hardcoded band generator."""
 from queue import Queue
 from typing import List, Callable
-from band_generator import IBandGenerator
-from question_answer import QuestionAnswer
-from keyboard_input_stream import KeyboardInputStream
+
+from .band_generator import IBandGenerator
+from .question_answer import QuestionAnswer
+from .keyboard_input_stream import KeyboardInputStream
 
 
 class SimpleBandGenerator(IBandGenerator):

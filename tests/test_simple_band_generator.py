@@ -1,13 +1,11 @@
-# test_band_generator.py
-
+# test_simple_band_generator.py
 """Unit tests for band generators"""
 from typing import List
-
 import pytest
 
-from mocked_input_stream import MockedInputStream
-from question_answer import QuestionAnswer
-from simple_band_generator import SimpleBandGenerator
+from src.mocked_input_stream import MockedInputStream
+from src.question_answer import QuestionAnswer
+from src.simple_band_generator import SimpleBandGenerator
 
 
 @pytest.fixture
