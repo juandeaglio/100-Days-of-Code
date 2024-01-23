@@ -9,4 +9,4 @@ Going to implement integration with ChatGPT 3.5 APIs to generate names based on 
 
 
 # View the tests for an understanding of the implementation.
-There are two (optionally a third test case with manual stdin input) that test and describe the functionality of the simple band name generator class.
+There are three (optionally a fourth test case with manual stdin input) that test and describe the functionality of the simple band name generator class.
