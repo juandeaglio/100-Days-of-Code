@@ -6,3 +6,7 @@ Generates bands based on a list of questions.
 Allows the user to answer via stdin or also use a list of strings to input multiple answers in one function call.
 
 Going to implement integration with ChatGPT 3.5 APIs to generate names based on the question + answer pair.
+
+
+# View the tests for an understanding of the implementation.
+There are two (optionally a third test case with manual stdin input) that test and describe the functionality of the simple band name generator class.
